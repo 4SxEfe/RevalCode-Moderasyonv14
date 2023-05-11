@@ -9,8 +9,8 @@ module.exports = {
   run: async(client, interaction) => {
 
     const embed = new EmbedBuilder()
-    .setTitle("Godzilla - Yardım Menüsü!")
-    .setDescription("**・Moderasyon Sistemi ↷**\n > Moderasyon Sistemi hakkında bilgi alabilirsiniz.\n \n**・Kullanıcı Sistemi ↷**\n> Kullanıcı Sistemi hakkında bilgi alabilirsiniz.")
+    .setTitle("Moderasyon Bot - Yardım Menüsü!")
+    .setDescription("**・Moderasyon Sistemi ↷**\n > Moderasyon Sistemi hakkında bilgi alabilirsiniz.\n \n**・Yardım-Destek Sistemi ↷**\n> Yardım-Destek Sistemi hakkında bilgi alabilirsiniz.")
     .setColor("Random")
     const row = new Discord.ActionRowBuilder()
     .addComponents(
@@ -19,9 +19,9 @@ new Discord.ButtonBuilder()
 .setStyle(Discord.ButtonStyle.Secondary)
 .setCustomId("moderasyon"),
 new Discord.ButtonBuilder()
-.setLabel("Kullanıcı")
+.setLabel("Yardım-Destek")
 .setStyle(Discord.ButtonStyle.Primary)
-.setCustomId("kullanıcı"))
+.setCustomId("yardım"))
 interaction.reply({embeds: [embed], components: [row], ephemeral: true})
   }
 
