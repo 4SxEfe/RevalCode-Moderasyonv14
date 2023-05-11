@@ -175,7 +175,7 @@ const embed = new Discord.EmbedBuilder()
 .setDescription("/Afk - Afk Olursunuz. \n /Avatar - Kişinin Avatarına Bakarsınız. \n /ban - Sunucudan Banlıyabilirsiniz \n Siz Devam Ettirebilirsiniz.")
 .setColor("Random")
 interaction.reply({embeds: [embed], components: [], ephemeral: true})
-  } if(interaction.customId == "kullanıcı") {
+  } if(interaction.customId == "yardım") {
     const embed = new Discord.EmbedBuilder()
     .setTitle("Moderasyon - Destek Menüsü")
     .setDescription("Dicord: ! Efe Balcan#1996 Yardım-Destek İçin Yaz \n Örnek Olarak Verilmiştir Kendiniz \n Bu Menüyü Doldurabilirsiniz")
