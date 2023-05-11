@@ -45,7 +45,7 @@ readdirSync('./events').forEach(e => {
 console.log(`[EVENT] ${name} eventi yüklendi.`)
 });
 
-client.login("MTA5NzkwNDE4MzQ3MjAyOTgyMA.GI9Q9H.1pQlHgZMKDes9ClyFhg30o5XpvN1c-3S4redwk")
+client.login("TOKEN")
 
 client.on("guildMemberAdd", member => {
   const kanal = db.get(`hgbb_${member.guild.id}`)
@@ -171,14 +171,14 @@ client.on("interactionCreate", async interaction => {
   let message = await interaction.channel.messages.fetch(interaction.message.id)  
   if(interaction.customId == "moderasyon") {
 const embed = new Discord.EmbedBuilder()
-.setTitle("Godzilla - Yardım Menüsü!")
-.setDescription("/ban-list - **Banlı Kullanıcıları Gösterir!**\n/ban - **Bir Üyeyi Yasaklarsın!**\n/emojiler - **Emojileri Görürsün!**\n/forceban - **ID İle Bir Kullanıcıyı Yasaklarsın!**\n/giriş-çıkış - **Giriş çıkış kanalını ayarlarsın!**\n/kanal-açıklama - **Kanalın Açıklamasını Değiştirirsin!**\n/kick - **Bir Üyeyi Atarsın!**\n/küfür-engel - **Küfür Engel Sistemini Açıp Kapatırsın!**\n/oto-rol - **Otorolü Ayarlarsın!**\n/oto-tag - **Oto Tagı Ayarlarsın!**\n/oylama - **Oylama Açarsın!**\n/reklam-engel - **Reklam Engel Sistemini Açarsın!**\n/rol-al - **Rol Alırsın**\n/rol-oluştur - **Rol Oluşturursun!**\n/rol-ver - **Rol Verirsin!**\n/sa-as - **Selam Sistemine Bakarsın!**\n/temizle - **Mesaj Silersin!**\n/unban - **Bir üyenin yasağını kaldırırsın!**")
+.setTitle("Moderasyon - Yardım Menüsü")
+.setDescription("/Afk - Afk Olursunuz. \n /Avatar - Kişinin Avatarına Bakarsınız. \n /ban - Sunucudan Banlıyabilirsiniz \n Siz Devam Ettirebilirsiniz.")
 .setColor("Random")
 interaction.reply({embeds: [embed], components: [], ephemeral: true})
   } if(interaction.customId == "kullanıcı") {
     const embed = new Discord.EmbedBuilder()
-    .setTitle("Godzilla - Yardım Menüsü!")
-    .setDescription("/avatar - **Bir Kullanıcının Avatarına Bakarsın!**\n/afk - **Sebepli Afk Olursun!**\n/emoji-yazı - **Bota Emoji İle Yazı Yazdırırsın!**\n/istatistik - **Bot istatistiklerini gösterir!**\n/kurucu-kim - **Kurucuyu Gösterir!**\n/ping - **Botun pingini gösterir!**\n/yardım - **Yardım Menüsünü Gösterir!**")
+    .setTitle("Moderasyon - Destek Menüsü")
+    .setDescription("Dicord: ! Efe Balcan#1996 Yardım-Destek İçin Yaz \n Örnek Olarak Verilmiştir Kendiniz \n Bu Menüyü Doldurabilirsiniz")
     .setColor("Random")
     interaction.reply({embeds: [embed], components: [], ephemeral: true})
   }});
